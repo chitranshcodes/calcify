@@ -6,9 +6,10 @@ def equal():
 
 window=Tk()
 window.title("Calculator")
+window.configure(bg='light blue')
 var= StringVar()
 window.geometry('300x400')
-Label(window, text='Calcify', font="'Times' 16 bold"   ,fg='purple').grid(row=0, columnspan=3)
+Label(window, text='Calcify',width=20, font="'Times' 16 bold"   ,fg='dark green', bg='yellow').grid(row=0, columnspan=3)
 Entry(window, textvariable=var).grid(row=1, columnspan=3)
 Button(window, text='7', width=14, command=lambda:digit('7')).grid(row=2,column=0)
 Button(window, text='8', width=14, command=lambda:digit('8')).grid(row=2,column=1)
@@ -26,4 +27,5 @@ Button(window, text='x', width=14, command=lambda:digit('*')).grid(row=6,column=
 Button(window, text='=', width=14, command=equal).grid(row=6,column=1)
 Button(window, text='/', width=14, command=lambda:digit('7')).grid(row=6,column=2)
 Button(window, text='clear', width=14, command=lambda:var.set("")).grid(row=7,column=1)
+
 window.mainloop()
